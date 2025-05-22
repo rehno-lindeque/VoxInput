@@ -59,7 +59,7 @@ func listen(pidPath string, replay bool) {
 		return "http://localhost:8080/v1"
 	}()
 	clientConfig.HTTPClient = &http.Client{
-		Timeout: time.Second * 30,
+		Timeout: time.Second * 300,
 	}
 
 	sigChan := make(chan os.Signal, 1)
